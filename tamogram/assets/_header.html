@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title><%= title %><% if title != '' %> : <% end %><%= @config['global_title'] %> styleguide</title>
+
+  <link rel="stylesheet" href="css/syntax-highlight.css">
+  <link rel="stylesheet" href="css/tamogram.css">
+
+  <% if @config['css_include'].to_s.strip.length != 0 %>
+    <% @config['css_include'].each do |css| %>
+      <link rel="stylesheet" href="<%= css %>">
+    <% end %>
+  <% end %>
+</head>
+
+<body class="styleguide_body">
+  <header class="styleguide_header">
+    <h1 class="styleguide_title siteLogo"><a href="index.html"><%= @config['global_title'] %></a></h1>
+
+    <nav class="styleguide_nav">
+      <a href="index.html" class="styleguide_nav_item <% if file_name.include?('index.html') %>is-selected<% end %>">Home</a>
+
+      <% @categories.each do |cat| %>
+        <% if cat[0] != @config['index'] %>
+          <a href="<%= cat[1] %>" class="styleguide_nav_item <% if title == cat[0] %>is-selected<% end %>">
+            <%= cat[0] %>
+          </a>
+        <% end %>
+      <% end %>
+    </nav>
+  </header>
+
+  <main class="styleguide_main">
+    <div class="styleguide_content">
