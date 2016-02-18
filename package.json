@@ -1,0 +1,20 @@
+{
+  "name": "tamogram",
+  "version": "2.0.0",
+  "description": "tamogram : 1 column theme for Hologram",
+  "main": "index.php",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0",
+    "gulp-hologram": "^1.2.0",
+    "gulp-pleeease": "^2.0.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TAM inc."
+}
