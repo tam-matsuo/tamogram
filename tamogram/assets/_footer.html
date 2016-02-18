@@ -1,0 +1,20 @@
+    </div>
+  </main>
+
+  <footer class="styleguide_footer">
+    <p>with <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/tam-matsuo/tamogram">tamogram theme</a></p>
+  </footer>
+
+  <% if @config['js_include'].to_s.strip.length != 0 %>
+    <% @config['js_include'].each do |js| %>
+      <script type="text/javascript" src="<%= js %>"></script>
+    <% end %>
+  <% end %>
+
+  <% if @config['components_include'].to_s.strip.length != 0 %>
+    <% @config['components_include'].each do |component| %>
+      <link rel="import" href="<%= component %>">
+    <% end %>
+  <% end %>
+</body>
+</html>

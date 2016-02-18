@@ -1,0 +1,112 @@
+/* global */
+.styleguide_header,
+.styleguide_content > :not(.styleguide_preview),
+.styleguide_footer {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  color: $color-text;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+@mixin styleguide($key) {
+  .styleguide_header #{$key},
+  .styleguide_content > #{$key},
+  .styleguide_content > :not(.styleguide_preview) #{$key},
+  .styleguide_footer #{$key} {
+    @content;
+  }
+}
+
+@include styleguide(a) {
+  color: $color-accent;
+  text-decoration: none;
+}
+@include styleguide('a:hover') {
+  text-decoration: underline;
+}
+
+@include styleguide(ul) {
+  margin: 1em 1em 4em 1em;
+}
+@include styleguide(dl) {
+  margin: 1em 1em 4em 1em;
+}
+@include styleguide(ol) {
+  margin: 1em 1em 4em 1em;
+}
+@include styleguide(li) {
+  list-style-position: inside;
+}
+@include styleguide(ul li) {
+  list-style: disc;
+}
+@include styleguide(ol li) {
+  list-style: decimal;
+}
+
+@include styleguide(em) {
+  font-weight: normal;
+  font-style: italic;
+}
+@include styleguide(strong) {
+  font-weight: bold;
+}
+@include styleguide(code) {
+  font-family: Consolas, Monaco, monospace;
+  background-color: $color-light-gray;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* preview */
+.styleguide_preview {
+  border: 1px solid $color-gray;
+  padding: 20px;
+  margin: 40px 0;
+
+  p {
+    margin: .5em 0;
+  }
+}
+
+.styleguide_codeblock pre {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 12px;
+  background-color: $color-light-gray;
+  border: 1px solid $color-gray;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 40px 0;
+}
+
+/* header */
+.styleguide_header {
+  width: 100%;
+  padding: 2em;
+  overflow: hidden;
+  border-bottom: 1px solid $color-gray;
+  line-height: 30px;
+
+  h1.styleguide_title {
+    font-size: 30px;
+    float: left;
+    margin: 0;
+    border-bottom: none;
+  }
+}
+
+/* main */
+.styleguide_main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* footer */
+.styleguide_footer {
+  border-top: 1px solid $color-gray;
+  width: 100%;
+  padding: 2em;
+  font-size: 12px;
+  text-align: right;
+}

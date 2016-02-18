@@ -1,0 +1,8 @@
+source: ./tamogram/styles
+destination: ./styleguide
+documentation_assets: ./tamogram/assets
+index: index
+custom_markdown: ./tamogram/templates/markdown_renderer.rb
+global_title: Tamogram
+nav_level: all
+exit_on_warnings: false
