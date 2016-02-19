@@ -1,7 +1,6 @@
 gulp             = require 'gulp'
 plumber          = require 'gulp-plumber'
 sass             = require 'gulp-sass'
-sourcemaps       = require 'gulp-sourcemaps'
 pleeease         = require 'gulp-pleeease'
 hologram         = require 'gulp-hologram'
 browserSync      = require 'browser-sync'
@@ -11,10 +10,8 @@ browserSync      = require 'browser-sync'
 gulp.task 'styles', ->
   gulp.src './tamogram/styles/*.scss'
     .pipe plumber()
-    .pipe sourcemaps.init()
     .pipe sass().on 'error', sass.logError
     .pipe pleeease()
-    .pipe sourcemaps.write '.'
     .pipe gulp.dest './tamogram/assets/css/'
 
   # hologram
