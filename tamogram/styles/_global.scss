@@ -73,6 +73,7 @@
 .styleguide_codeblock pre {
   font-family: Consolas, Monaco, monospace;
   font-size: 12px;
+  word-wrap: break-word;
   background-color: $color-light-gray;
   border: 1px solid $color-gray;
   border-radius: 4px;
