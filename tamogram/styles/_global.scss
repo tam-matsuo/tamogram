@@ -59,15 +59,16 @@
   font-size: 12px;
 }
 
+@include styleguide(p) {
+  margin: .5em 0;
+}
+
+
 /* preview */
 .styleguide_preview {
   border: 1px solid $color-gray;
   padding: 20px;
   margin: 40px 0;
-
-  p {
-    margin: .5em 0;
-  }
 }
 
 .styleguide_codeblock pre {
