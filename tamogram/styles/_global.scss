@@ -3,7 +3,7 @@
 .styleguide_content > :not(.styleguide_preview),
 .styleguide_footer {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  color: $color-text;
+  color: $tamogram-color-text;
   line-height: 1.6;
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@
 }
 
 @include styleguide(a) {
-  color: $color-accent;
+  color: $tamogram-color-accent;
   text-decoration: none;
 }
 @include styleguide('a:hover') {
@@ -53,7 +53,7 @@
 }
 @include styleguide(code) {
   font-family: Consolas, Monaco, monospace;
-  background-color: $color-light-gray;
+  background-color: $tamogram-color-light-gray;
   padding: 2px 4px;
   border-radius: 4px;
   font-size: 12px;
@@ -66,7 +66,7 @@
 
 /* preview */
 .styleguide_preview {
-  border: 1px solid $color-gray;
+  border: 1px solid $tamogram-color-gray;
   padding: 20px;
   margin: 40px 0;
 }
@@ -75,8 +75,8 @@
   font-family: Consolas, Monaco, monospace;
   font-size: 12px;
   word-wrap: break-word;
-  background-color: $color-light-gray;
-  border: 1px solid $color-gray;
+  background-color: $tamogram-color-light-gray;
+  border: 1px solid $tamogram-color-gray;
   border-radius: 4px;
   padding: 10px;
   margin: 40px 0;
@@ -87,7 +87,7 @@
   width: 100%;
   padding: 2em;
   overflow: hidden;
-  border-bottom: 1px solid $color-gray;
+  border-bottom: 1px solid $tamogram-color-gray;
   line-height: 30px;
 
   h1.styleguide_title {
@@ -106,7 +106,7 @@
 
 /* footer */
 .styleguide_footer {
-  border-top: 1px solid $color-gray;
+  border-top: 1px solid $tamogram-color-gray;
   width: 100%;
   padding: 2em;
   font-size: 12px;

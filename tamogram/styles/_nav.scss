@@ -21,14 +21,14 @@ category: nav
 
   .styleguide_nav_item {
     padding: 5px 10px;
-    color: $color-text;
+    color: $tamogram-color-text;
     text-decoration: none;
 
     &.is-selected {
-      border-bottom: 3px solid $color-accent;
+      border-bottom: 3px solid $tamogram-color-accent;
     }
     &:hover {
-      border-bottom: 3px solid $color-main;
+      border-bottom: 3px solid $tamogram-color-main;
       text-decoration: none;
     }
   }
